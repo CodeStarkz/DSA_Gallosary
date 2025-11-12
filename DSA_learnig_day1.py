@@ -112,3 +112,46 @@ for i in range(1,number+1):
         pass
 print(f"divisors for given numbers are {divisors} ")
 
+"""
+Or most optimized way
+"""
+from math import *
+num = 36
+divisors = []
+for i in range(1,int(sqrt(num)+1)):
+    if num % i == 0:
+        divisors.append(i)
+        if i != num // i:
+            divisors.append(num//i)
+print(f"divisors= {divisors}")
+
+print(" ########################## Starting Hatch Maapping #############")
+
+"""
+Frequency Map 
+"""
+
+list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,6,2,5,6,7,8,7,3,12,13,16,11,11,14]
+
+item_count_mappering = {}
+
+for item in list:
+    if item in item_count_mappering:
+        item_count_mappering[item] += 1
+    else:
+        item_count_mappering[item] = 1
+print(item_count_mappering)
+
+
+print("#################Using Hash-Map#################")
+
+list=list
+
+hash_map = {}
+n=len(list)
+
+for i in range(0,n):
+    hash_map[list[i]] = hash_map.get(list[i],0) + 1
+print(hash_map)
+
+
