@@ -27,3 +27,24 @@ for item in list_1:
 
 print(f"value stored at index is representing the repetetion of no of times of element present in list_1, {value_count_list}")
 print(list_1)
+
+
+print("############# Character Hashing ######################")
+
+name = "AbhishekSingh"
+st= ["a","h","i","s","k"]
+
+"""
+problem statement we have to check that how many times each character is present in name
+"""
+
+hash_dict= {}
+for character in st:
+    if character in name.lower():
+        hash_dict[character] = hash_dict.get(character,0)
+for character in name.lower():
+    if character in st:
+        hash_dict[character] = hash_dict.get(character,0) + 1
+
+
+print(hash_dict)
